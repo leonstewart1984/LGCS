@@ -38,7 +38,7 @@
             Email: <a href="mailto:LGcleaning-services@outlook.com">LGcleaning-services@outlook.com</a>
         </div>
         <div class="bookingbackground">
-            <form id="theform" action="result.html" method="GET">
+            <form id="theform" action="email.php" method="post" enctype="multipart/form-data">
                 <fieldset>
                     <legend>Request a personalised quote*</legend>
                     <div class="addy">
@@ -67,7 +67,7 @@
                                 <input type="radio" id="Commercial" name="puse" value="Commercial" onclick="renderOption();">Commercial
                             </label>
                         </div>
-                        <div class="ownProductsOff"><label for="ownproducts">Do you provide use of your own cleaning products</label><input type="checkbox" id="ownproducts" name="products provided" value="yes"></div>
+                        <div class="ownProductsOff"><label for="ownproducts">Do you provide use of your own cleaning products</label><input type="checkbox" id="ownproducts" name="products_provided" value="yes"></div>
                     </div>
                     <div class="addy">
                         <label for="property_num">Flat/Room No</label>
@@ -141,7 +141,7 @@
                     </div>
                     <div class="upload">
                         <label for="pictures">Include images if possible...</label>
-                        <input type="file" name="pictures">
+                        <input type="file" name="pictures" multiple="multiple">
                     </div>
                     <label>Services required</label>
                     <div class="servicesrq">
@@ -166,13 +166,13 @@
                         <input type="datetime-local" name="prefdate">
                     </div>
                     <div>
-                        <label for="prefdate2">Availability for appointment</label>
-                        <select name="prefdate2" id="">
+                        <label for="prefdate2time">Availability for appointment</label>
+                        <select name="prefdate2time id="">
                             <option value=""></option>
                             <option value="AM">AM</option>
                             <option value="PM">PM</option>
                         </select>
-                        <select name="prefdate2" id="">
+                        <select name="prefdate2day" id="">
                             <option value=""></option>
                             <option value="Weekdays">Weekdays</option>
                             <option value="Weekends">Weekends</option>
